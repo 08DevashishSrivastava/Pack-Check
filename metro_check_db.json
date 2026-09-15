@@ -1,0 +1,798 @@
+{
+  "users": [
+    {
+      "id": "usr-001",
+      "name": "Inspector Rajesh Sharma",
+      "email": "inspector@metrocheck.gov.in",
+      "phone": "+91 98765 43210",
+      "department": "Legal Metrology Department, Delhi Zone",
+      "password_hash": "$2a$10$DVxXQM20BI.OF.4kNwUy7OKJLXpvjdESDa.aIoZfjZHdnZMypo4Ii",
+      "role": "INSPECTOR",
+      "created_at": "2026-01-15T09:00:00.000Z",
+      "updated_at": "2026-01-15T09:00:00.000Z"
+    },
+    {
+      "id": "usr-002",
+      "name": "Senior Officer Anita Verma",
+      "email": "admin@metrocheck.gov.in",
+      "phone": "+91 98111 22334",
+      "department": "Central Legal Metrology Enforcement HQ",
+      "password_hash": "$2a$10$Q9LTvoa70m9iO23hadZ61eza0f6Qq7UNLvE98uAW30U3T4/jasJzm",
+      "role": "ADMIN",
+      "created_at": "2026-01-10T09:00:00.000Z",
+      "updated_at": "2026-01-10T09:00:00.000Z"
+    },
+    {
+      "id": "usr-mt5irqvh",
+      "name": "Field Officer Dev",
+      "email": "dev_test_1787472156145@metrocheck.gov.in",
+      "phone": "+91 99999 88888",
+      "department": "Zonal Inspectorate Mumbai",
+      "password_hash": "$2a$10$fT8jBD9GVW2.g/gIW6GxaOYcdvkaMNqPLetIrxPlTmzz/FvB9nYOi",
+      "role": "INSPECTOR",
+      "created_at": "2026-08-23T08:02:36.365Z",
+      "updated_at": "2026-08-23T08:02:36.365Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-001",
+      "brand": "NutriCrunch Foods",
+      "name": "Digestive Oats & Honey Biscuits 200g",
+      "category": "Food & Beverages",
+      "barcode": "8901030829142",
+      "manufacturer": "NutriCrunch Consumer Products Pvt Ltd, Industrial Area, Solan, HP - 173220",
+      "created_at": "2026-02-01T10:00:00.000Z"
+    },
+    {
+      "id": "prod-002",
+      "brand": "PureGlo Skincare",
+      "name": "Revitalizing Aloe Vera Face Wash 150ml",
+      "category": "Personal Care / Cosmetics",
+      "barcode": "8906014289901",
+      "manufacturer": "Aura Cosmeceuticals Ltd, Baddi, HP",
+      "created_at": "2026-02-05T11:30:00.000Z"
+    },
+    {
+      "id": "prod-003",
+      "brand": "SunSpice Essentials",
+      "name": "Organic Turmeric Powder 500g",
+      "category": "Spices & Condiments",
+      "barcode": "8904021590123",
+      "manufacturer": "SunSpice Agro Mills, Erode, Tamil Nadu",
+      "created_at": "2026-02-10T14:15:00.000Z"
+    },
+    {
+      "id": "prod-004",
+      "brand": "SparkleTech",
+      "name": "Multi-Surface Disinfectant Spray 500ml",
+      "category": "Household Cleaning",
+      "barcode": "8908005432198",
+      "manufacturer": "Sparkle Hygiene Chem India Ltd, Vapi, Gujarat",
+      "created_at": "2026-02-12T09:45:00.000Z"
+    }
+  ],
+  "inspections": [
+    {
+      "id": "INSP-2026-0847",
+      "date": "2026-08-23T08:09:05.521Z",
+      "status": "NON_COMPLIANT",
+      "score": 72,
+      "product_name": "demo",
+      "brand": "parleG",
+      "category": "Food & Beverages",
+      "barcode": "8901030829142",
+      "inspector_id": "usr-002",
+      "inspector_name": "Senior Officer Anita Verma",
+      "total_declarations": 8,
+      "passed_rules": 7,
+      "failed_rules": 1,
+      "warning_rules": 0,
+      "images": [
+        {
+          "id": "img-face-1",
+          "type": "FRONT",
+          "url": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=800&auto=format&fit=crop&q=80",
+          "fileName": "front_principal_display.jpg"
+        },
+        {
+          "id": "img-face-1787472534953-0",
+          "type": "BACK",
+          "url": "blob:http://localhost:5173/a86998ae-cb9f-46a7-b83a-9ffa857be2e3",
+          "fileName": "parle-g-biscuit-1000x1000.webp"
+        }
+      ],
+      "declarations": [
+        {
+          "field": "Product Name",
+          "value": "demo",
+          "confidence": 0.96,
+          "status": "DETECTED",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 100,
+            "y": 70,
+            "width": 260,
+            "height": 40
+          }
+        },
+        {
+          "field": "Net Quantity",
+          "value": "250 g (Numeral height 2.8mm)",
+          "confidence": 0.91,
+          "status": "NON_COMPLIANT",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 130,
+            "y": 210,
+            "width": 130,
+            "height": 32
+          }
+        },
+        {
+          "field": "Maximum Retail Price (MRP)",
+          "value": "₹65.00 (Incl. of all taxes)",
+          "confidence": 0.97,
+          "status": "DETECTED",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 290,
+            "y": 210,
+            "width": 170,
+            "height": 35
+          }
+        },
+        {
+          "field": "Unit Sale Price (USP)",
+          "value": "₹0.26 / g",
+          "confidence": 0.94,
+          "status": "DETECTED",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 290,
+            "y": 250,
+            "width": 140,
+            "height": 28
+          }
+        },
+        {
+          "field": "Manufacturer Name & Address",
+          "value": "parleG Manufacturing Ltd",
+          "confidence": 0.92,
+          "status": "DETECTED",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 80,
+            "y": 300,
+            "width": 320,
+            "height": 50
+          }
+        },
+        {
+          "field": "Date of Manufacture / Packing",
+          "value": "06/2026",
+          "confidence": 0.95,
+          "status": "DETECTED",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 80,
+            "y": 360,
+            "width": 180,
+            "height": 30
+          }
+        },
+        {
+          "field": "Consumer Care Contact",
+          "value": "Phone & Email declared",
+          "confidence": 0.96,
+          "status": "DETECTED",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 80,
+            "y": 400,
+            "width": 300,
+            "height": 35
+          }
+        },
+        {
+          "field": "Country of Origin",
+          "value": "India",
+          "confidence": 0.98,
+          "status": "DETECTED",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 80,
+            "y": 445,
+            "width": 150,
+            "height": 28
+          }
+        }
+      ],
+      "violations": [
+        {
+          "id": "viol-1787472545520",
+          "rule_code": "LM-RULE-06-NETQTY-FONT",
+          "title": "Net Quantity Font Height Inadequate for Weight Category",
+          "severity": "HIGH",
+          "status": "VIOLATION",
+          "detected_value": "2.8 mm font height for 250g package",
+          "expected_condition": "Minimum 3.0 mm numeral height required for packages between 200g and 500g under Schedule II Table-I",
+          "confidence": 0.91,
+          "recommendation": "Increase numeral height on principal display panel to 3.0 mm or above.",
+          "image_id": "img-face-1",
+          "bbox": {
+            "x": 130,
+            "y": 210,
+            "width": 130,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "INSP-2026-0846",
+      "date": "2026-08-23T08:02:36.395Z",
+      "status": "NON_COMPLIANT",
+      "score": 72,
+      "product_name": "Organic Wheat Flour 5kg",
+      "brand": "Harvest Farms",
+      "category": "Food & Beverages",
+      "barcode": "8901234567890",
+      "inspector_id": "usr-mt5irqvh",
+      "inspector_name": "Field Officer Dev",
+      "total_declarations": 8,
+      "passed_rules": 7,
+      "failed_rules": 1,
+      "warning_rules": 0,
+      "images": [
+        {
+          "id": "img-test-1",
+          "type": "FRONT",
+          "url": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e"
+        }
+      ],
+      "declarations": [
+        {
+          "field": "Product Name",
+          "value": "Organic Wheat Flour 5kg",
+          "confidence": 0.96,
+          "status": "DETECTED",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 100,
+            "y": 70,
+            "width": 260,
+            "height": 40
+          }
+        },
+        {
+          "field": "Net Quantity",
+          "value": "250 g (Numeral height 2.8mm)",
+          "confidence": 0.91,
+          "status": "NON_COMPLIANT",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 130,
+            "y": 210,
+            "width": 130,
+            "height": 32
+          }
+        },
+        {
+          "field": "Maximum Retail Price (MRP)",
+          "value": "₹65.00 (Incl. of all taxes)",
+          "confidence": 0.97,
+          "status": "DETECTED",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 290,
+            "y": 210,
+            "width": 170,
+            "height": 35
+          }
+        },
+        {
+          "field": "Unit Sale Price (USP)",
+          "value": "₹0.26 / g",
+          "confidence": 0.94,
+          "status": "DETECTED",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 290,
+            "y": 250,
+            "width": 140,
+            "height": 28
+          }
+        },
+        {
+          "field": "Manufacturer Name & Address",
+          "value": "Harvest Farms Manufacturing Ltd",
+          "confidence": 0.92,
+          "status": "DETECTED",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 80,
+            "y": 300,
+            "width": 320,
+            "height": 50
+          }
+        },
+        {
+          "field": "Date of Manufacture / Packing",
+          "value": "06/2026",
+          "confidence": 0.95,
+          "status": "DETECTED",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 80,
+            "y": 360,
+            "width": 180,
+            "height": 30
+          }
+        },
+        {
+          "field": "Consumer Care Contact",
+          "value": "Phone & Email declared",
+          "confidence": 0.96,
+          "status": "DETECTED",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 80,
+            "y": 400,
+            "width": 300,
+            "height": 35
+          }
+        },
+        {
+          "field": "Country of Origin",
+          "value": "India",
+          "confidence": 0.98,
+          "status": "DETECTED",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 80,
+            "y": 445,
+            "width": 150,
+            "height": 28
+          }
+        }
+      ],
+      "violations": [
+        {
+          "id": "viol-1787472156392",
+          "rule_code": "LM-RULE-06-NETQTY-FONT",
+          "title": "Net Quantity Font Height Inadequate for Weight Category",
+          "severity": "HIGH",
+          "status": "VIOLATION",
+          "detected_value": "2.8 mm font height for 250g package",
+          "expected_condition": "Minimum 3.0 mm numeral height required for packages between 200g and 500g under Schedule II Table-I",
+          "confidence": 0.91,
+          "recommendation": "Increase numeral height on principal display panel to 3.0 mm or above.",
+          "image_id": "img-test-1",
+          "bbox": {
+            "x": 130,
+            "y": 210,
+            "width": 130,
+            "height": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "INSP-2026-0841",
+      "product_id": "prod-001",
+      "product_name": "NutriCrunch Digestive Oats & Honey Biscuits 200g",
+      "brand": "NutriCrunch Foods",
+      "category": "Food & Beverages",
+      "inspector_id": "usr-001",
+      "inspector_name": "Inspector Rajesh Sharma",
+      "date": "2026-08-22T10:30:00Z",
+      "status": "NON_COMPLIANT",
+      "score": 64,
+      "total_declarations": 9,
+      "passed_rules": 6,
+      "failed_rules": 2,
+      "warning_rules": 1,
+      "images": [
+        {
+          "id": "img-1",
+          "type": "FRONT",
+          "url": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=800&auto=format&fit=crop&q=80",
+          "detected_text": "NutriCrunch Digestive Biscuits 200g MRP Rs 45.00"
+        },
+        {
+          "id": "img-2",
+          "type": "BACK",
+          "url": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&auto=format&fit=crop&q=80",
+          "detected_text": "Mfg Date: 05/2026, Best Before: 9 Months, Consumer Care: customercare@nutricrunch.in, Lic No: 10014022002341"
+        }
+      ],
+      "declarations": [
+        {
+          "field": "Product Name",
+          "value": "Digestive Oats & Honey Biscuits",
+          "confidence": 0.98,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 120,
+            "y": 80,
+            "width": 280,
+            "height": 45
+          }
+        },
+        {
+          "field": "Net Quantity",
+          "value": "200 g (Font height 2.2mm)",
+          "confidence": 0.94,
+          "status": "NON_COMPLIANT",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 150,
+            "y": 220,
+            "width": 140,
+            "height": 35
+          }
+        },
+        {
+          "field": "Maximum Retail Price (MRP)",
+          "value": "₹45.00 (Inclusive of all taxes missing breakdown font standard)",
+          "confidence": 0.96,
+          "status": "WARNING",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 320,
+            "y": 220,
+            "width": 160,
+            "height": 40
+          }
+        },
+        {
+          "field": "Manufacturer Name & Address",
+          "value": "NutriCrunch Consumer Products Pvt Ltd, Solan, HP",
+          "confidence": 0.91,
+          "status": "DETECTED",
+          "image_id": "img-2",
+          "bbox": {
+            "x": 80,
+            "y": 110,
+            "width": 320,
+            "height": 60
+          }
+        },
+        {
+          "field": "Date of Manufacture / Packaging",
+          "value": "05/2026 (Month and Year declared)",
+          "confidence": 0.95,
+          "status": "DETECTED",
+          "image_id": "img-2",
+          "bbox": {
+            "x": 80,
+            "y": 190,
+            "width": 220,
+            "height": 35
+          }
+        },
+        {
+          "field": "Consumer Care Details",
+          "value": "customercare@nutricrunch.in, Tel: 1800-200-1122",
+          "confidence": 0.97,
+          "status": "DETECTED",
+          "image_id": "img-2",
+          "bbox": {
+            "x": 80,
+            "y": 240,
+            "width": 340,
+            "height": 40
+          }
+        },
+        {
+          "field": "Country of Origin",
+          "value": "India",
+          "confidence": 0.93,
+          "status": "DETECTED",
+          "image_id": "img-2",
+          "bbox": {
+            "x": 80,
+            "y": 290,
+            "width": 150,
+            "height": 30
+          }
+        },
+        {
+          "field": "Unit Sale Price (USP)",
+          "value": "NOT DETECTED",
+          "confidence": 0.89,
+          "status": "MISSING",
+          "image_id": "img-1",
+          "bbox": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "viol-001",
+          "rule_code": "LM-RULE-06-NETQTY-FONT",
+          "title": "Net Quantity Numeral Font Height Below Minimum Threshold",
+          "severity": "HIGH",
+          "status": "VIOLATION",
+          "detected_value": "2.2 mm font height for 200g package",
+          "expected_condition": "Minimum 3.0 mm numeral height required for packages between 100g and 500g under Schedule II, Table-I",
+          "confidence": 0.94,
+          "recommendation": "Increase numeral height to at least 3.0 mm in accordance with Legal Metrology (Packaged Commodities) Rules, 2011 Schedule II.",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 150,
+            "y": 220,
+            "width": 140,
+            "height": 35
+          }
+        },
+        {
+          "id": "viol-002",
+          "rule_code": "LM-RULE-06-USP",
+          "title": "Mandatory Unit Sale Price (USP) Declaration Missing",
+          "severity": "CRITICAL",
+          "status": "VIOLATION",
+          "detected_value": "No Unit Sale Price (e.g. ₹0.225 / g or ₹22.50 / 100g) found on principal display panel",
+          "expected_condition": "Mandatory declaration of Unit Sale Price alongside MRP for packages containing net quantity > 1 unit/100g/100ml under amended Rule 6(1)(h)",
+          "confidence": 0.96,
+          "recommendation": "Add Unit Sale Price declaration e.g. \"₹22.50 per 100 g\" prominently alongside MRP.",
+          "image_id": "img-1",
+          "bbox": null
+        },
+        {
+          "id": "viol-003",
+          "rule_code": "LM-RULE-06-MRP-FMT",
+          "title": "MRP Suffix Standard Compliance Review",
+          "severity": "LOW",
+          "status": "WARNING",
+          "detected_value": "\"Rs. 45.00 incl. taxes\"",
+          "expected_condition": "Format must strictly state \"Maximum Retail Price ₹xx.xx (inclusive of all taxes)\" or \"MRP ₹xx.xx (incl. of all taxes)\"",
+          "confidence": 0.88,
+          "recommendation": "Ensure standard currency symbol ₹ and full clarity on tax inclusion.",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 320,
+            "y": 220,
+            "width": 160,
+            "height": 40
+          }
+        }
+      ]
+    },
+    {
+      "id": "INSP-2026-0840",
+      "product_id": "prod-002",
+      "product_name": "PureGlo Revitalizing Aloe Vera Face Wash 150ml",
+      "brand": "PureGlo Skincare",
+      "category": "Personal Care / Cosmetics",
+      "inspector_id": "usr-001",
+      "inspector_name": "Inspector Rajesh Sharma",
+      "date": "2026-08-21T14:10:00Z",
+      "status": "COMPLIANT",
+      "score": 96,
+      "total_declarations": 9,
+      "passed_rules": 9,
+      "failed_rules": 0,
+      "warning_rules": 0,
+      "images": [
+        {
+          "id": "img-1",
+          "type": "FRONT",
+          "url": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&auto=format&fit=crop&q=80",
+          "detected_text": "PureGlo Aloe Vera Face Wash 150 ml"
+        }
+      ],
+      "declarations": [
+        {
+          "field": "Product Name",
+          "value": "Aloe Vera Face Wash",
+          "confidence": 0.99,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 100,
+            "y": 70,
+            "width": 250,
+            "height": 40
+          }
+        },
+        {
+          "field": "Net Quantity",
+          "value": "150 ml (Font height 4.1mm)",
+          "confidence": 0.97,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 140,
+            "y": 210,
+            "width": 120,
+            "height": 30
+          }
+        },
+        {
+          "field": "Maximum Retail Price (MRP)",
+          "value": "₹199.00 (Incl. of all taxes) | USP: ₹1.33 / ml",
+          "confidence": 0.98,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 280,
+            "y": 210,
+            "width": 180,
+            "height": 35
+          }
+        },
+        {
+          "field": "Manufacturer Name & Address",
+          "value": "Aura Cosmeceuticals Ltd, Baddi, HP",
+          "confidence": 0.95,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 90,
+            "y": 260,
+            "width": 300,
+            "height": 45
+          }
+        },
+        {
+          "field": "Consumer Care Details",
+          "value": "care@pureglo.in, Tel: 1800-419-8800",
+          "confidence": 0.98,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 90,
+            "y": 315,
+            "width": 320,
+            "height": 35
+          }
+        }
+      ],
+      "violations": []
+    },
+    {
+      "id": "INSP-2026-0839",
+      "product_id": "prod-003",
+      "product_name": "SunSpice Organic Turmeric Powder 500g",
+      "brand": "SunSpice Essentials",
+      "category": "Spices & Condiments",
+      "inspector_id": "usr-001",
+      "inspector_name": "Inspector Rajesh Sharma",
+      "date": "2026-08-20T11:45:00Z",
+      "status": "NEEDS_REVIEW",
+      "score": 76,
+      "total_declarations": 9,
+      "passed_rules": 7,
+      "failed_rules": 1,
+      "warning_rules": 1,
+      "images": [
+        {
+          "id": "img-1",
+          "type": "FRONT",
+          "url": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&auto=format&fit=crop&q=80",
+          "detected_text": "SunSpice Organic Turmeric Powder 500g"
+        }
+      ],
+      "declarations": [
+        {
+          "field": "Product Name",
+          "value": "Organic Turmeric Powder",
+          "confidence": 0.98,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 100,
+            "y": 70,
+            "width": 250,
+            "height": 40
+          }
+        },
+        {
+          "field": "Net Quantity",
+          "value": "500 g",
+          "confidence": 0.92,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 120,
+            "y": 200,
+            "width": 100,
+            "height": 30
+          }
+        },
+        {
+          "field": "MRP & Unit Sale Price",
+          "value": "MRP ₹160.00 | USP: Low contrast print",
+          "confidence": 0.74,
+          "status": "NEEDS_REVIEW",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 240,
+            "y": 200,
+            "width": 180,
+            "height": 35
+          }
+        }
+      ],
+      "violations": [
+        {
+          "id": "viol-004",
+          "rule_code": "LM-RULE-09-CONTRAST",
+          "title": "Low Contrast Print on Principal Display Area",
+          "severity": "MEDIUM",
+          "status": "NEEDS_REVIEW",
+          "detected_value": "Contrast ratio 2.8:1 for price declaration",
+          "expected_condition": "Clear, legible, indelible and high contrast printing required under Rule 9(1)(a)",
+          "confidence": 0.74,
+          "recommendation": "Manual visual inspection recommended to ensure customer legibility in standard retail light.",
+          "image_id": "img-1",
+          "bbox": {
+            "x": 240,
+            "y": 200,
+            "width": 180,
+            "height": 35
+          }
+        }
+      ]
+    },
+    {
+      "id": "INSP-2026-0838",
+      "product_id": "prod-004",
+      "product_name": "SparkleTech Multi-Surface Disinfectant Spray 500ml",
+      "brand": "SparkleTech",
+      "category": "Household Cleaning",
+      "inspector_id": "usr-001",
+      "inspector_name": "Inspector Rajesh Sharma",
+      "date": "2026-08-19T16:20:00Z",
+      "status": "NON_COMPLIANT",
+      "score": 55,
+      "total_declarations": 9,
+      "passed_rules": 5,
+      "failed_rules": 3,
+      "warning_rules": 1,
+      "images": [
+        {
+          "id": "img-1",
+          "type": "FRONT",
+          "url": "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&auto=format&fit=crop&q=80",
+          "detected_text": "SparkleTech Spray 500ml"
+        }
+      ],
+      "declarations": [
+        {
+          "field": "Product Name",
+          "value": "Multi-Surface Disinfectant Spray",
+          "confidence": 0.97,
+          "status": "DETECTED",
+          "image_id": "img-1",
+          "bbox": null
+        },
+        {
+          "field": "Consumer Care Contact",
+          "value": "Phone missing, only generic website given",
+          "confidence": 0.95,
+          "status": "NON_COMPLIANT",
+          "image_id": "img-1",
+          "bbox": null
+        }
+      ],
+      "violations": [
+        {
+          "id": "viol-005",
+          "rule_code": "LM-RULE-06-CONSUMER-CARE",
+          "title": "Missing Telephone Number in Consumer Care Declaration",
+          "severity": "CRITICAL",
+          "status": "VIOLATION",
+          "detected_value": "Only website URL provided",
+          "expected_condition": "Consumer care declaration must specify name, address, telephone number, and email of the grievance redressal officer under Rule 6(1)(n)",
+          "confidence": 0.95,
+          "recommendation": "Provide complete postal address and active telephone/helpline number.",
+          "image_id": "img-1",
+          "bbox": null
+        }
+      ]
+    }
+  ]
+}

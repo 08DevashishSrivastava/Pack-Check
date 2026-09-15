@@ -1,16 +1,28 @@
 {
-  "name": "metro-check",
+  "name": "metro-check-server",
   "version": "1.0.0",
-  "description": "Legal Metrology (Packaged Commodities) Rules, 2011 Compliance Inspection System",
-  "private": true,
+  "description": "Backend server for Legal Metrology compliance inspection platform",
+  "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "dev:server": "npm --prefix server run dev",
-    "dev:client": "npm --prefix client run dev",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
-    "build:client": "npm --prefix client run build"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/migrations/migrateJsonToMySQL.js",
+    "migrate:real-ocr": "node src/migrations/addRealOcrSchema.js",
+    "test:gemini-image": "node scripts/test-gemini-image.js"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "@google/genai": "^2.18.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "form-data": "^4.0.6",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.3",
+    "pdfkit": "^0.20.1",
+    "sharp": "^0.35.3",
+    "uuid": "^14.0.2"
   }
 }
