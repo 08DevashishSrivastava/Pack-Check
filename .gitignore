@@ -1,0 +1,11 @@
+server/.env
+client/.env
+.env
+node_modules/
+client/node_modules/
+server/node_modules/
+ai-service/.venv/
+server/uploads/
+client/dist/
+__pycache__/
+*.pyc
